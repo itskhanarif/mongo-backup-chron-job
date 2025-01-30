@@ -2,7 +2,7 @@
 
 # Script Variables
 DB_NAME="myDB"
-BUCKET_NAME="<bucket_name>" # Replace with your S3 bucket name
+BUCKET_NAME="mongodb-backup-bucket-arif" # Replace with your S3 bucket name
 BACKUP_DIR="/tmp/mongo_backups"
 TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
 BACKUP_FILE="$BACKUP_DIR/${DB_NAME}_backup_$TIMESTAMP.gz"
