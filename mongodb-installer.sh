@@ -3,10 +3,10 @@
 
 # Update system packages
 echo "Updating system packages..."
-sudo apt-get update -y
+sudo yum update -y
 
 #From a terminal, install gnupg and curl if they are not already available
-sudo apt-get install gnupg curl
+sudo yum install gnupg curl
 
 #To import the MongoDB public GPG key, run the following command
 curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \
@@ -18,10 +18,10 @@ curl -fsSL https://pgp.mongodb.com/server-8.0.asc | \
 echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.com/apt/ubuntu noble/mongodb-enterprise/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-enterprise-8.0.list
 
 #Reload the package database
-sudo apt-get update
+sudo yum update
 
 #Install MongoDB Enterprise Server
-sudo apt-get install -y mongodb-enterprise
+sudo yum install -y mongodb-enterprise
 
 # Start MongoDB service
 echo "Starting MongoDB service..."
